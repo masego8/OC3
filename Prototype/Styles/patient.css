@@ -1,0 +1,41 @@
+.book-appointment {
+    padding: 20px;
+    margin-left: 60px;
+  }
+  
+  .appointment-form {
+    width: 800px;
+    margin: 0 auto;
+    background-color: grey;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    text-align: center; /* Center-aligns the content inside the form */
+  }
+  
+  .appointment-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .appointment-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .appointment-form input,
+  .appointment-form select,
+  .appointment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .appointment-form .btn {
+    margin: 0 auto; /* Ensures the button is centered */
+    display: inline-block; /* Required for margin auto to work */
+  }

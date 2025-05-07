@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Database Wireframe</title>
+    
+    <link rel="stylesheet" href="../Styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- Header -->
+        <div id="header-placeholder"></div>
+
+        <!-- Content -->
+        <main class="content">
+
+            <!-- Navbar -->
+            <div id="sidebar-placeholder"></div>
+
+             <!-- Main Content -->
+            <div id="page-content"></div>
+            
+
+        </main>
+
+        <!-- Footer -->
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <!--Scripts-->
+    <script src="../Scripts/login.js"></script>
+    <script src="../Scripts/sidebar.js"></script>
+
+    <script src="/Prototype/Scripts/componentLoader.js"></script>
+    <script>
+        // Load Footer And Header
+        (async () => {
+            await loadComponent("footer-placeholder", "../Components/footer.html");
+            await loadComponent("header-placeholder", "../Components/header.html");
+           
+        })();
+
+        // Load the initial content — book appointment for patients
+        // Load role-specific dashboard
+        const role = localStorage.getItem("userRole");
+        let defaultPage = "";
+
+        if (role === "admin") defaultPage = "./Admin/dashboard.html";
+        else if (role === "doctor") defaultPage = "./Doctors/dashboard.html";
+        else if (role === "patient") defaultPage = "./Patients/dashboard.html";
+
+        if (defaultPage) {
+            loadContent(defaultPage);
+        }
+
+        // Load role-specific styles
+        if (role) {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = `../Styles/${role}.css`;
+            document.head.appendChild(link);
+            }
+
+
+    </script>
+
+
+</body>
+
+</html>

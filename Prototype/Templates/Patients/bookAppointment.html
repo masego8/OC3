@@ -1,0 +1,33 @@
+<!-- Book Appointment.html (Patient) -->
+<section class="book-appointment">
+    <h2>Book Appointment</h2>
+  
+    <form class="appointment-form">
+      <div class="form-group">
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" required>
+          <option value="">-- Choose a Doctor --</option>
+          <option value="drsmith">Dr. Smith</option>
+          <option value="drjohnson">Dr. Johnson</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" min="09:00" max="17:00" step="1800" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="reason">Reason for Visit:</label>
+        <textarea id="reason" rows="4" placeholder="Enter reason..." required></textarea>
+      </div>
+  
+      <button type="submit" class="btn primary-btn">Submit Appointment</button>
+    </form>
+  </section>
+  

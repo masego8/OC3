@@ -1,0 +1,42 @@
+<!--Admin Dashboard-->
+
+<section class="admin-dashboard">
+    <h2>Welcome, Admin</h2>
+    <p class="subtitle">Select a section to begin managing the hospital database.</p>
+  
+    <div class="dashboard-cards">
+      <div class="card" onclick="loadContent('./Admin/doctors.html')">
+        <i class="fas fa-user-md"></i>
+        <h3>Manage Doctors</h3>
+        <p>View, add, or update doctor profiles.</p>
+      </div>
+  
+      <div class="card" onclick="loadContent('./Admin/patients.html')">
+        <i class="fas fa-user-injured"></i>
+        <h3>Manage Patients</h3>
+        <p>Access and update patient information.</p>
+      </div>
+  
+      <div class="card" onclick="loadContent('./Admin/reports.html')">
+        <i class="fas fa-chart-line"></i>
+        <h3>View Reports</h3>
+        <p>Analyze hospital performance data.</p>
+      </div>
+    </div>
+  
+    <div class="dashboard-stats">
+      <div class="stat-box">
+        <h4>Total Doctors</h4>
+        <p>23</p>
+      </div>
+      <div class="stat-box">
+        <h4>Total Patients</h4>
+        <p>148</p>
+      </div>
+      <div class="stat-box">
+        <h4>Appointments This Week</h4>
+        <p>42</p>
+      </div>
+    </div>
+  </section>
+  

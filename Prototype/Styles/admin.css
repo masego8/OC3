@@ -1,0 +1,92 @@
+/* ===============================
+   Theme Variables & Color Scheme
+   =============================== */
+   :admin-dashboard {
+    --primary-color: lightgrey;       /* Cards, backgrounds */
+    --secondary-color: #1e293b;       /* Stat boxes */
+    --background-color: #ffffff;      /* General background */
+    --text-color: #000000;            /* Main text */
+    --border-color: #cccccc;          /* Borders */
+}
+
+/* ===============================
+   Admin Dashboard Section Layout
+   =============================== */
+.admin-dashboard {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.subtitle {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* ===============================
+   Dashboard Cards
+   =============================== */
+.dashboard-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1 1 250px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+/* ===============================
+   Dashboard Stats Section
+   =============================== */
+.dashboard-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    flex: 1 1 200px;
+    background-color: var(--secondary-color);
+    color: black;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-box h4 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.stat-box p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}

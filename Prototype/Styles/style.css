@@ -1,0 +1,336 @@
+/* =========================
+   THEME VARIABLES
+   ========================= */
+   :root {
+    --primary-color: #1e88e5;       /* Button and highlight blue */
+    --secondary-color: #f5f5f5;     /* Light gray backgrounds */
+    --background-color: #ffffff;    /* Main background */
+    --text-color: #000000;          /* Default text */
+    --border-color: #cccccc;        /* Light borders */
+    --hover-color: #2563EB;         /* Button hover blue */
+    --danger-color: #DC2626;        /* Logout & delete red */
+    --success-color: #10B981;       /* Load buttons */
+    --accent-color: #0d47a1;        /* Optional darker blue */
+}
+
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.logo-img {
+    width: 100px;
+    height: auto;
+    max-width: 150px;
+}
+
+/* =========================
+   MAIN CONTENT LAYOUT
+   ========================= */
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    flex: 1;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+.sidebar {
+    width: 250px;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-right: 2px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav li {
+    margin-bottom: 15px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    transition: background 0.3s ease;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.nav-btn:hover {
+    opacity: 0.9;
+    transform: translateX(5px);
+}
+
+.nav-btn.active {
+    background-color: var(--accent-color);
+    font-weight: bold;
+    border-left: 5px solid var(--hover-color);
+}
+
+.logout-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* =========================
+   ICON COLORS ON HOVER
+   ========================= */
+.nav-btn:hover i.fa-user-md { color: #2563EB; }
+.nav-btn:hover i.fa-user-injured { color: #16A34A; }
+.nav-btn:hover i.fa-calendar-check { color: #F59E0B; }
+.nav-btn:hover i.fa-prescription-bottle-alt { color: #D946EF; }
+.nav-btn:hover i.fa-pills { color: #E11D48; }
+.nav-btn:hover i.fa-file-invoice-dollar { color: #10B981; }
+
+/* =========================
+   SEARCH & FILTER BAR
+   ========================= */
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--border-color);
+    padding: 0px;
+    
+}
+
+.dropdown-btn {
+    background-color: grey;
+}
+
+.search-box {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 250px;
+}
+
+/* =========================
+   TABLE STYLING
+   ========================= */
+.table {
+    flex: 1;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+/* =========================
+   ACTION BUTTONS
+   ========================= */
+.btn {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--hover-color);
+}
+
+.load-btn {
+    background-color: var(--success-color);
+}
+
+.load-btn:hover {
+    opacity: 0.9;
+}
+
+.action-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.action-btn:first-of-type {
+    background-color: var(--primary-color);
+}
+
+.action-btn:last-of-type {
+    background-color: var(--danger-color);
+}
+
+/* =========================
+   LOAD BUTTONS SECTION
+   ========================= */
+.bottom {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.load-options {
+    display: flex;
+    gap: 10px;
+}
+
+/* =========================
+   LOGIN FORM STYLES
+   ========================= */
+   .login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--accent-color);
+}
+
+/* =========================
+   ERROR MESSAGE
+   ========================= */
+   .error-message {
+    padding: 30px;
+    margin: 20px;
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-text);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.error-message h2 {
+    margin-bottom: 10px;
+}
+
+.error-message p {
+    font-size: 1rem;
+}
+
+.no-content {
+    padding: 30px;
+    margin: 20px;
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-text);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.no-content h2 {
+    margin-bottom: 10px;
+}
+
+.no-content p {
+    font-size: 1rem;
+}
+
