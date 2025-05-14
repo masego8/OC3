@@ -14,9 +14,8 @@
             <aside class="sidebar">
                 <ul class="nav">
                     <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/dashboard.html')"><i class="fas fa-arrow-left"></i></a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-list"></i> Doctor List</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-user-plus"></i> Add Doctor</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-user-edit"></i> Edit Doctor</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/listDoctors.html')"><i class="fas fa-list"></i> Doctor List</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/addDoctors.html')"><i class="fas fa-user-plus"></i> Add Doctor</a></li>
                     <li><a href="#" onclick="logout()" class="btn nav-btn logout-btn">Logout</a></li>
                 </ul>
             </aside>
