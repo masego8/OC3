@@ -1,0 +1,49 @@
+<section class="patient-records-wrapper">
+  <div class="patient-info">
+    <h2>Patient Records</h2>
+    <p><strong>Name:</strong> Skyler Chichgar</p>
+    <p><strong>Patient ID:</strong> FZJXKBND</p>
+    <p><strong>DOB:</strong> 12/04/1985</p>
+    <p><strong>Phone:</strong> 107 609 4159</p>
+    <p><strong>Insurance ID:</strong> 49125477</p>
+  </div>
+
+  <div class="records-grid">
+    <!-- Left: Previous records -->
+    <div class="previous-records">
+      <h3>Previous Records</h3>
+      <ul id="record-list">
+        <li>
+          <strong>Date:</strong> 2025-05-14<br>
+          <strong>Diagnosis:</strong> Seasonal allergies<br>
+          <strong>Notes:</strong> Prescribed antihistamines.
+        </li>
+        <li>
+          <strong>Date:</strong> 2025-04-02<br>
+          <strong>Diagnosis:</strong> Migraine<br>
+          <strong>Notes:</strong> Advised to track triggers, prescribed ibuprofen.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: New record form -->
+    <div class="new-record-form">
+      <h3>Add New Record</h3>
+      <form id="add-record-form">
+        <div class="form-group">
+          <label for="record-date">Date:</label>
+          <input type="date" id="record-date" required>
+        </div>
+        <div class="form-group">
+          <label for="diagnosis">Diagnosis:</label>
+          <input type="text" id="diagnosis" placeholder="Enter diagnosis" required>
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes:</label>
+          <textarea id="notes" rows="4" placeholder="Enter notes or observations..." required></textarea>
+        </div>
+        <button type="submit" class="btn primary-btn">Save Record</button>
+      </form>
+    </div>
+  </div>
+</section>

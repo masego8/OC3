@@ -3,9 +3,12 @@
         admin_general: `
             <aside class="sidebar">
                 <ul class="nav">
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/doctors.html')"><i class="fas fa-user-md"></i> Manage Doctors</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/patients.html')"><i class="fas fa-user-injured"></i> Manage Patients</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-chart-line"></i> Reports</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/doctors.html')"><i class="fas fa-user-md"></i>Doctors</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/patients.html')"><i class="fas fa-user-injured"></i>Patients</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-chart-line"></i>Visits</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-chart-line"></i>Prescriptions</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-chart-line"></i>Drugs</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-chart-line"></i>insurance</a></li>
                     <li><a href="#" onclick="logout()" class="btn nav-btn logout-btn">Logout</a></li>
                 </ul>
             </aside>
@@ -14,8 +17,8 @@
             <aside class="sidebar">
                 <ul class="nav">
                     <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/dashboard.html')"><i class="fas fa-arrow-left"></i></a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/listDoctors.html')"><i class="fas fa-list"></i> Doctor List</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/addDoctors.html')"><i class="fas fa-user-plus"></i> Add Doctor</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/doctorList.html')"><i class="fas fa-list"></i> Doctor List</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/doctorAdd.html')"><i class="fas fa-user-plus"></i> Add Doctor</a></li>
                     <li><a href="#" onclick="logout()" class="btn nav-btn logout-btn">Logout</a></li>
                 </ul>
             </aside>
@@ -24,9 +27,8 @@
             <aside class="sidebar">
                 <ul class="nav">
                     <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/dashboard.html')"><i class="fas fa-arrow-left"></i></a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-list"></i> Patient List</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-user-plus"></i> Add Patient</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/.html')"><i class="fas fa-user-edit"></i> Edit Patient</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/patientList.html')"><i class="fas fa-list"></i> Patient List</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Admin/patientAdd.html')"><i class="fas fa-user-plus"></i> Add Patient</a></li>
                     <li><a href="#" onclick="logout()" class="btn nav-btn logout-btn">Logout</a></li>
                 </ul>
             </aside>
@@ -37,7 +39,7 @@
                     <li><a href="#" class="btn nav-btn" onclick="loadContent('./Doctors/schedule.html')"><i class="fas fa-clock"></i> Schedule</a></li>
                     <li><a href="#" class="btn nav-btn" onclick="loadContent('./Doctors/patientRecords.html')"><i class="fas fa-folder-open"></i> Patient Records</a></li>
                     <li><a href="#" class="btn nav-btn" onclick="loadContent('./Doctors/prescriptions.html')"><i class="fas fa-prescription-bottle-alt"></i> Prescriptions</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Doctors/drugs.html')"><i class="fas fa-pills"></i> Drugs</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('./Doctors/viewDrugs.html')"><i class="fas fa-pills"></i> Drugs</a></li>
                     <li><a href="#" onclick="logout()" class="btn nav-btn logout-btn">Logout</a></li>
                 </ul>
             </aside>

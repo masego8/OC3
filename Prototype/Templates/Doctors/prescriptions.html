@@ -1,0 +1,40 @@
+<section class="prescription-section">
+  <h2>Patient Prescriptions</h2>
+  <p id="search-hint">Enter a patient name or drug to view prescriptions.</p>
+
+
+  <input type="text" id="prescription-search" placeholder="Search by patient name or drug..." />
+
+  <div class="table-container">
+    <table class="prescription-table">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Drug</th>
+          <th>Dosage</th>
+          <th>Frequency</th>
+          <th>Prescribed By</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="prescription-body">
+        <!-- Rows injected by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination" id="prescription-pagination"></div>
+
+  <hr>
+
+  <h3>Add New Prescription</h3>
+  <form id="new-prescription-form">
+    <input type="text" id="new-patient-name" placeholder="Patient Name" required />
+    <input type="text" id="new-drug" placeholder="Drug" required />
+    <input type="text" id="new-dosage" placeholder="Dosage (e.g. 500mg)" required />
+    <input type="text" id="new-frequency" placeholder="Frequency (e.g. Twice a day)" required />
+    <input type="text" id="new-doctor" placeholder="Prescribed By" required />
+    <input type="date" id="new-date" required />
+    <button type="submit" class="btn primary-btn">Add Prescription</button>
+  </form>
+</section>

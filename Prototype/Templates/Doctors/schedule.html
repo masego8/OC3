@@ -1,0 +1,35 @@
+<section class="doctor-schedule-wrapper">
+  <div class="schedule-header">
+    <h2>Weekly Schedule</h2>
+  <div class="week-navigation">
+  <button 
+    id="prev-week" 
+    class="btn small-btn" 
+    style="background-color: #007bff; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;"
+  >
+    ← Previous
+  </button>
+
+  <span id="week-range" style="margin: 0 10px; font-weight: bold;"></span>
+
+  <button 
+    id="next-week" 
+    class="btn small-btn" 
+    style="background-color: #007bff; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;"
+  >
+    Next →
+  </button>
+</div>
+
+
+  <div class="weekly-schedule-grid" id="schedule-grid">
+    <!-- Days will be injected dynamically -->
+  </div>
+
+  <div class="schedule-legend">
+    <h4>Legend</h4>
+    <p><i class="fas fa-user-md"></i> Appointments</p>
+    <p><i class="fas fa-chalkboard-teacher"></i> Training</p>
+    <p><i class="fas fa-handshake"></i> Meetings</p>
+  </div>
+</section>

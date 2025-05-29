@@ -1,0 +1,39 @@
+<section class="doctor-list-section">
+  <h2>List of Doctors</h2>
+
+  <!-- Search -->
+  <div class="top">
+    <input type="text" id="search" class="search-box" placeholder="Search by name">
+    <button class="btn primary-btn" onclick="applySearch()"><i class="fas fa-search"></i> Search</button>
+  </div>
+
+  <!-- Table -->
+  <div class="table-wrapper">
+    <table id="doctor-table">
+      <thead>
+        <tr>
+          <th>Doctor ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="doctor-table-body">
+        <!-- Filled dynamically -->
+         
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Buttons -->
+  <div class="bottom">
+    <button class="btn load-btn" onclick="loadDoctors('general')"><i class="fas fa-user-md"></i> Load Doctors</button>
+    <button class="btn load-btn" onclick="loadDoctors('specialist')"><i class="fas fa-user-shield"></i> Load Specialists</button>
+  </div>
+</section>
+
+<!-- Script -->
+<script src="/Scripts/listDoctors.js"></script>

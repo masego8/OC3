@@ -18,6 +18,98 @@ async function loadContent(file) {
         </section>
         `
 
+
+        // If we just loaded the booking page, load its script and setup handler
+        if (file.includes("bookAppointment.html")) {
+            const script = document.createElement("script");
+            script.src = "../Scripts/bookAppointment.js";
+            script.onload = () => {
+                if (typeof setupAppointmentForm === "function") {
+                    setupAppointmentForm();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("personalDetails.html")) {
+            const script = document.createElement("script");
+            script.src = "../Scripts/editPatientDetails.js";
+            script.onload = () => {
+                if (typeof setupEditPatientDetails === "function") {
+                    setupEditPatientDetails();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("schedule.html")) {
+            const script = document.createElement("script");
+            script.src = "../Scripts/doctorSchedule.js";
+            script.onload = () => {
+                if (typeof setupDoctorSchedule === "function") {
+                setupDoctorSchedule();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("patientRecords.html")) {
+            const script = document.createElement("script");
+            script.src = "../Scripts/patientRecords.js";
+            script.onload = () => {
+                if (typeof setupPatientRecords === "function") {
+                setupPatientRecords();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("viewDrugs.html")) {
+            const script = document.createElement("script");
+            script.src = "../Scripts/drugLists.js";
+            script.onload = () => {
+                if (typeof setupDrugTable === "function") {
+                setupDrugTable();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("prescriptions.html")) {
+            const script = document.createElement("script");
+            script.src = "../Scripts/prescription.js";
+            script.onload = () => {
+                if (typeof setupPrescriptions === "function") {
+                setupPrescriptions();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("doctorAdd.html")) {
+            const script = document.createElement("script");
+            script.src = "../Scripts/addDoctor.js";
+            script.onload = () => {
+                if (typeof setupAddDoctorForm === "function") {
+                setupAddDoctorForm();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("doctorList.html")) {
+            const script = document.createElement("script");
+            script.src = "/Scripts/listDoctors.js";
+            document.body.appendChild(script);
+        }
+
+
+
+
+
+
+
+
         // Only proceed to change sidebar if content loaded successfully
         const role = localStorage.getItem("userRole");
         let sidebarKey = "";
