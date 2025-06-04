@@ -5,9 +5,9 @@ function login(event) {
     const password = document.getElementById("password").value.trim();
 
     const users = [
-        { username: "admin", password: "admin123", role: "admin" },
-        { username: "drsmith", password: "docpass", role: "doctor" },
-        { username: "patient01", password: "pat123", role: "patient" }
+        { username: "julie@admin.com", password: "Password123", role: "admin" },
+        { username: "jsmith@outlook.com", password: "Password123", role: "doctor" },
+        { username: "schichgar", password: "Password123", role: "patient" }
     ];
 
     const foundUser = users.find(
