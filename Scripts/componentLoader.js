@@ -20,7 +20,7 @@ async function loadContent(file) {
 
 
         // If we just loaded the booking page, load its script and setup handler
-        if (file.includes("bookAppointment.html")) {
+        if (file.includes("/bookAppointment.html")) {
             const script = document.createElement("script");
             script.src = "../Scripts/bookAppointment.js";
             script.onload = () => {
