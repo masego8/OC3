@@ -1,0 +1,30 @@
+<section class="prescription-section">
+  <h2>Patient Prescriptions</h2>
+  <p id="search-hint">Enter a patient name or drug to view prescriptions.</p>
+
+
+  <input type="text" id="prescription-search" placeholder="Search by patient name or drug..." />
+
+  <div class="table-container">
+    <table class="prescription-table">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Drug</th>
+          <th>Dosage</th>
+          <th>Frequency</th>
+          <th>Prescribed By</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="prescription-body">
+        <!-- Rows injected by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination" id="prescription-pagination"></div>
+
+  <hr>
+
+</section>

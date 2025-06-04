@@ -57,6 +57,15 @@ body {
     flex: 1;
 }
 
+#page-content {
+  max-width: 1000px;   /* control max width */
+  margin: 0 auto;      /* center horizontally */
+  padding: 20px;       /* nice spacing inside */
+  box-sizing: border-box;
+  
+}
+
+
 /* =========================
    SIDEBAR
    ========================= */
@@ -333,4 +342,5 @@ tr:nth-child(even) {
 .no-content p {
     font-size: 1rem;
 }
+
 

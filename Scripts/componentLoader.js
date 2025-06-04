@@ -3,7 +3,7 @@ async function loadContent(file) {
     if (!container) return;
 
     try {
-        console.log("📦 Loading file:", file);
+    
         const res = await fetch(file);
 
         if (!res.ok) {
@@ -88,7 +88,7 @@ async function loadContent(file) {
 
         if (file.includes("doctorAdd.html")) {
             const script = document.createElement("script");
-            script.src = "../Scripts/addDoctor.js";
+            script.src = "../../Scripts/addDoctor.js";
             script.onload = () => {
                 if (typeof setupAddDoctorForm === "function") {
                 setupAddDoctorForm();
@@ -103,7 +103,38 @@ async function loadContent(file) {
             document.body.appendChild(script);
         }
 
+       if (file.includes("visits.html")) {
+        const script = document.createElement("script");
+        script.src = "../Scripts/visits.js";
+        script.onload = () => {
+            if (typeof setupVisitsPage === "function") {
+            setupVisitsPage();
+            }
+        };
+        document.body.appendChild(script);
+        }
 
+        if (file.includes("patientList.html")) {
+            const script = document.createElement("script");
+            script.src = "../../Scripts/patient.js";  // assuming your patient logic is inside patients.js
+            script.onload = () => {
+                if (typeof setupPatientsPage === "function") {
+                    setupPatientsPage();
+                }
+            };
+            document.body.appendChild(script);
+        }
+
+        if (file.includes("patientAdd.html")) {
+            const script = document.createElement("script");
+            script.src = "../../Scripts/addPatient.js";
+            script.onload = () => {
+                if (typeof setupAddPatientPage === "function") {
+                setupAddPatientPage();
+                }
+            };
+            document.body.appendChild(script);
+        }
 
 
 
@@ -130,7 +161,6 @@ async function loadContent(file) {
         }
 
         const sidebarContainer = document.getElementById("sidebar-placeholder");
-        console.log("🧭 Final sidebarKey:", sidebarKey);
 
         if (sidebarContainer && sidebars[sidebarKey]) {
             sidebarContainer.innerHTML = sidebars[sidebarKey];

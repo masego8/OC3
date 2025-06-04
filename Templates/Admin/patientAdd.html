@@ -1,0 +1,38 @@
+<section class="add-patient-section">
+  <h2>Add New Patient</h2>
+
+  
+  <form id="add-patient-form" class="doctor-form">
+    <div class="form-group">
+      <label for="full-name">Full Name:</label>
+      <input type="text" id="full-name" required />
+    </div>
+
+   <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input type="text" id="dob" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="text" id="address" required />
+    </div>
+
+    <button type="submit" class="btn primary-btn">Add Patient</button>
+  <p id="add-patient-confirmation" style="display:none; margin-top: 1rem; color: green;">✅ Patient added successfully!</p>
+
+  </form>
+
+    <div id="new-patient-preview" class="new-doctor-card" style="display: none; margin-top: 1.5rem;"></div>
+
+  </section>

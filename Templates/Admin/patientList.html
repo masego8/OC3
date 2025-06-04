@@ -1,0 +1,34 @@
+<section class="patient-list-section">
+  <h2>List of Patients</h2>
+
+  <!-- Search -->
+  <div class="top">
+    <input type="text" id="search" class="search-box" placeholder="Search by name or surname" oninput="applyPatientSearch()">
+    <button class="btn primary-btn" onclick="applyPatientSearch()"><i class="fas fa-search"></i> Search</button>
+  </div>
+
+
+
+  <!-- Table -->
+  <div class="table-wrapper">
+    <table class="patient-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>DOB</th>
+          <th>Phone</th>
+          <th>Insurance ID</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="patient-table-body"></tbody>
+    </table>
+  </div>
+
+  <!-- Buttons (optional: only if you want extra actions later) -->
+  <div class="bottom">
+    <!-- You can add any buttons here if needed -->
+  </div>
+</section>
