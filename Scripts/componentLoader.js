@@ -1,8 +1,3 @@
-// Detect base path automatically based on GitHub Pages or local
-const repoName = window.location.pathname.split("/")[1];
-const BASE_PATH = `/${repoName}`;
-
-
 async function loadContent(file) {
     const container = document.getElementById("page-content");
     if (!container) return;
@@ -27,7 +22,7 @@ async function loadContent(file) {
         // If we just loaded the booking page, load its script and setup handler
         if (file.includes("/bookAppointment.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/bookAppointment.js";
+            script.src = "../Scripts/bookAppointment.js";
             script.onload = () => {
                 if (typeof setupAppointmentForm === "function") {
                     setupAppointmentForm();
@@ -38,7 +33,7 @@ async function loadContent(file) {
 
         if (file.includes("personalDetails.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/editPatientDetails.js";
+            script.src = "../Scripts/editPatientDetails.js";
             script.onload = () => {
                 if (typeof setupEditPatientDetails === "function") {
                     setupEditPatientDetails();
@@ -49,7 +44,7 @@ async function loadContent(file) {
 
         if (file.includes("schedule.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/doctorSchedule.js";
+            script.src = "../Scripts/doctorSchedule.js";
             script.onload = () => {
                 if (typeof setupDoctorSchedule === "function") {
                 setupDoctorSchedule();
@@ -60,7 +55,7 @@ async function loadContent(file) {
 
         if (file.includes("patientRecords.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/patientRecords.js";
+            script.src = "../Scripts/patientRecords.js";
             script.onload = () => {
                 if (typeof setupPatientRecords === "function") {
                 setupPatientRecords();
@@ -71,7 +66,7 @@ async function loadContent(file) {
 
         if (file.includes("viewDrugs.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/drugLists.js";
+            script.src = "../Scripts/drugLists.js";
             script.onload = () => {
                 if (typeof setupDrugTable === "function") {
                 setupDrugTable();
@@ -82,7 +77,7 @@ async function loadContent(file) {
 
         if (file.includes("prescriptions.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/prescription.js";
+            script.src = "../Scripts/prescription.js";
             script.onload = () => {
                 if (typeof setupPrescriptions === "function") {
                 setupPrescriptions();
@@ -93,7 +88,7 @@ async function loadContent(file) {
 
         if (file.includes("doctorAdd.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/addDoctor.js";
+            script.src = "../../Scripts/addDoctor.js";
             script.onload = () => {
                 if (typeof setupAddDoctorForm === "function") {
                 setupAddDoctorForm();
@@ -104,13 +99,13 @@ async function loadContent(file) {
 
         if (file.includes("doctorList.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/listDoctors.js";
+            script.src = "/Scripts/listDoctors.js";
             document.body.appendChild(script);
         }
 
        if (file.includes("visits.html")) {
         const script = document.createElement("script");
-        script.src = "${BASE_PATH}/Scripts/visits.js";
+        script.src = "../Scripts/visits.js";
         script.onload = () => {
             if (typeof setupVisitsPage === "function") {
             setupVisitsPage();
@@ -121,7 +116,7 @@ async function loadContent(file) {
 
         if (file.includes("patientList.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/patient.js";  // assuming your patient logic is inside patients.js
+            script.src = "../../Scripts/patient.js";  // assuming your patient logic is inside patients.js
             script.onload = () => {
                 if (typeof setupPatientsPage === "function") {
                     setupPatientsPage();
@@ -132,7 +127,7 @@ async function loadContent(file) {
 
         if (file.includes("patientAdd.html")) {
             const script = document.createElement("script");
-            script.src = "${BASE_PATH}/Scripts/addPatient.js";
+            script.src = "../../Scripts/addPatient.js";
             script.onload = () => {
                 if (typeof setupAddPatientPage === "function") {
                 setupAddPatientPage();
