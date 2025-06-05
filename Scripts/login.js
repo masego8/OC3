@@ -18,7 +18,7 @@ function login(event) {
         localStorage.setItem("loggedIn", "true");
         localStorage.setItem("userRole", foundUser.role);
         localStorage.setItem("username", foundUser.username);
-        window.location.href = "../index.html";
+        window.location.href = "index.html";
     } else {
         alert("Invalid username or password.");
     }
