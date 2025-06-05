@@ -3,10 +3,10 @@
         admin_general: `
             <aside class="sidebar">
                 <ul class="nav">
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('../Templates/Admin/doctors.html')"><i class="fas fa-user-md"></i>Doctors</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('../Templates/Admin/patients.html')"><i class="fas fa-user-injured"></i>Patients</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('../Templates/Admin/visits.html')"><i class="fas fa-chart-line"></i>Visits</a></li>
-                    <li><a href="#" class="btn nav-btn" onclick="loadContent('../Templates/Doctors/prescriptions.html')"><i class="fas fa-chart-line"></i>Prescriptions</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('/Templates/Admin/doctors.html')"><i class="fas fa-user-md"></i>Doctors</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('/Templates/Admin/patients.html')"><i class="fas fa-user-injured"></i>Patients</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('/Templates/Admin/visits.html')"><i class="fas fa-chart-line"></i>Visits</a></li>
+                    <li><a href="#" class="btn nav-btn" onclick="loadContent('/Templates/Doctors/prescriptions.html')"><i class="fas fa-chart-line"></i>Prescriptions</a></li>
                     <li><a href="#" onclick="logout()" class="btn nav-btn logout-btn">Logout</a></li>
                 </ul>
             </aside>
